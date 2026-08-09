@@ -67,12 +67,12 @@ cinematic scene is worse than no clip.
 **It is upscaled from a 258px source**, so it is never drawn larger than ~300px
 on screen. If a vector version exists, swap it in and the size cap can go.
 
-## Before deploying — required
+## Live URL
 
-`index.html`, `public/robots.txt` and `public/sitemap.xml` contain a **placeholder
-domain** (`kairoindustries.com`). Replace it with the real URL everywhere before
-submitting to Search Console — Google treats a canonical as authoritative, so a
-wrong one is worse than none.
+All URLs point at `https://kairo-industries.vercel.app/`. If a custom domain is
+added later, update the canonical in `index.html`, `public/robots.txt` and
+`public/sitemap.xml` together — Google treats a canonical as authoritative, so
+a stale one is worse than none.
 
 ## Google Search Console
 

@@ -3,4 +3,4 @@ Allow: /
 
 # Update the host once the live domain is set — a sitemap pointing at the wrong
 # host is silently ignored by Search Console.
-Sitemap: https://kairoindustries.com/sitemap.xml
+Sitemap: https://kairo-industries.vercel.app/sitemap.xml
