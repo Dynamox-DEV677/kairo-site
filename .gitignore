@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# Vercel builds from source; the local build output should never be committed.
+.vercel/
+
+# Superseded single-file prototype, kept locally only.
+_v1-static.html.bak

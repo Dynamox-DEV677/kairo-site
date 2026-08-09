@@ -1,0 +1,156 @@
+/* ---------------------------------------------------------------------------
+   KAIRO INDUSTRIES — design system
+
+   The mark is a chrome ribbon crossing an angular form: orbital, engineered,
+   monochrome-with-a-light-source. Everything here follows from that.
+
+   Violet is treated as LIGHT, not as fill. Nothing is "violet coloured" — things
+   are lit by violet. That single rule is what keeps this away from the cheap
+   AI-gradient look, where violet is painted onto surfaces instead of emitted.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* True black. The hero is a black hole in open space — any lift in the base
+     colour reads as haze and kills the sense of void. */
+  --void: #000005;
+  --deep: #0b0810;
+  --plum: #120a1f;
+  --violet-deep: #25113f;
+  --violet: #7c3aed;
+  --violet-soft: #a78bfa;
+  --white: #f7f5ff;
+  --muted: #9b96a8;
+  --faint: #4a465a;
+
+  --hair: rgba(247, 245, 255, 0.1);
+  --glass: rgba(247, 245, 255, 0.04);
+
+  --font: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* One easing for the whole site. Mixed curves read as inconsistency. */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background: var(--void);
+  /* Lenis drives scrolling; native smooth scroll would fight it. */
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--white);
+  background: var(--void);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--violet); color: #fff; }
+
+/* Film grain — fixed, so it reads as a property of the screen rather than
+   something travelling with the content. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* -- type ------------------------------------------------------------------ */
+
+.display {
+  font-weight: 700;
+  line-height: 0.84;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.label {
+  font-size: clamp(9px, 0.72vw, 11px);
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.mono-num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.14em;
+}
+
+/* -- layout ---------------------------------------------------------------- */
+
+.chapter {
+  position: relative;
+  width: 100%;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  /* Establishes the 3D context every ParallaxLayer translates within. */
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.wrap {
+  width: min(1440px, 90vw);
+  margin-inline: auto;
+}
+
+/* -- atmosphere ------------------------------------------------------------ */
+
+/* A light source, not a coloured panel: radial, off-centre, mostly transparent. */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 34%, rgba(5, 5, 7, 0.85) 100%);
+}
+
+.grid-floor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(to right, rgba(167, 139, 250, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.07) 1px, transparent 1px);
+  background-size: 90px 90px;
+  mask-image: radial-gradient(ellipse at 50% 60%, #000 5%, transparent 62%);
+}
+
+/* -- focus ----------------------------------------------------------------- */
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--violet-soft);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  /* Sticky stages collapse to normal flow so nothing depends on scrubbing. */
+  .stage { position: relative; height: auto; min-height: 100svh; }
+}

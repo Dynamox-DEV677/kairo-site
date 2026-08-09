@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Single-page site, so one URL. The chapter anchors are not separate pages and
+  must NOT be listed here — Google treats #fragments as the same URL, and
+  padding a sitemap with them is a known quality signal against you.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kairoindustries.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

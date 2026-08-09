@@ -1,0 +1,48 @@
+{
+  "photos": [
+    {
+      "slot": "deep-field",
+      "file": "space/deep-field.jpg",
+      "credit": "Anunturi gratuite",
+      "url": "https://www.pexels.com/photo/stars-at-night-14676/"
+    },
+    {
+      "slot": "nebula",
+      "file": "space/nebula.jpg",
+      "credit": "Robert Gruszecki",
+      "url": "https://www.pexels.com/photo/view-of-a-galaxy-20881655/"
+    },
+    {
+      "slot": "milky-way",
+      "file": "space/milky-way.jpg",
+      "credit": "Jozef Papp",
+      "url": "https://www.pexels.com/photo/photo-of-the-starry-night-sky-18358576/"
+    },
+    {
+      "slot": "planet",
+      "file": "space/planet.jpg",
+      "credit": "Zelch Csaba",
+      "url": "https://www.pexels.com/photo/planet-in-space-darkness-20376411/"
+    },
+    {
+      "slot": "earth-limb",
+      "file": "space/earth-limb.jpg",
+      "credit": "Zelch Csaba",
+      "url": "https://www.pexels.com/photo/stunning-view-of-earth-from-space-30596291/"
+    }
+  ],
+  "videos": [
+    {
+      "slot": "starfield-drift",
+      "file": "video/starfield-drift.mp4",
+      "credit": "Stephen (Why Steve) Jacobs",
+      "url": "https://www.pexels.com/video/lines-of-star-trail-in-the-sky-at-night-3176053/"
+    },
+    {
+      "slot": "nebula-slow",
+      "file": "video/nebula-slow.mp4",
+      "credit": "Nicola Narracci",
+      "url": "https://www.pexels.com/video/stunning-timelapse-of-a-colorful-nebula-in-space-34054569/"
+    }
+  ]
+}
