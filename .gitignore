@@ -11,3 +11,6 @@ dist/
 
 # Superseded single-file prototype, kept locally only.
 _v1-static.html.bak
+
+# Pre-compression originals — kept locally, never shipped
+.asset-originals/
