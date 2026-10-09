@@ -7,6 +7,7 @@ import {
   VisionScene, SystemsScene, TechnologyScene,
   EducationScene, IndustriesScene, FutureScene, ContactScene,
 } from './components/scenes/Chapters'
+import { TestingScene } from './components/scenes/TestingScene'
 
 const CHAPTERS = [
   { id: 'arrival', n: '01' },
@@ -16,7 +17,8 @@ const CHAPTERS = [
   { id: 'education', n: '05' },
   { id: 'industries', n: '06' },
   { id: 'future', n: '07' },
-  { id: 'contact', n: '08' },
+  { id: 'testing', n: '08' },
+  { id: 'contact', n: '09' },
 ]
 
 export default function App() {
@@ -35,6 +37,7 @@ export default function App() {
         <EducationScene />
         <IndustriesScene />
         <FutureScene />
+        <TestingScene />
         <ContactScene />
       </main>
     </>
@@ -123,11 +126,14 @@ function Nav() {
         <img src="/kairo-mark-white.png" alt="" width={24} height={24} style={{ display: 'block' }} />
         <span className="label" style={{ color: 'var(--white)', letterSpacing: '.3em', fontSize: 10 }}>Kairo</span>
       </a>
-      <div style={{ display: 'flex', gap: 24 }}>
-        {[['Systems', 'systems'], ['Technology', 'technology'], ['Education', 'education'], ['Contact', 'contact']].map(
+      {/* Five links don't fit a phone (they ran under the logo and off the
+          edge), so on small screens only the tester call stays: that's the
+          one a student arriving from a link actually needs. */}
+      <div className="nav-links" style={{ display: 'flex', gap: 24 }}>
+        {[['Systems', 'systems'], ['Technology', 'technology'], ['Education', 'education'], ['Test Kyno', 'testing'], ['Contact', 'contact']].map(
           ([label, id]) => (
-            <a key={id} href={`#${id}`} className="label"
-              style={{ color: 'var(--white)', opacity: 0.55, textDecoration: 'none', fontSize: 9.5 }}>
+            <a key={id} href={`#${id}`} className={id === 'testing' ? 'label nav-cta' : 'label'}
+              style={{ color: 'var(--white)', opacity: id === 'testing' ? 0.9 : 0.55, textDecoration: 'none', fontSize: 9.5 }}>
               {label}
             </a>
           )
@@ -158,6 +164,7 @@ function ChapterIndicator() {
   return (
     <div
       aria-hidden="true"
+      className="chapter-rail"
       style={{
         position: 'fixed', right: 'max(16px, 2.2vw)', top: '50%',
         transform: 'translateY(-50%)', zIndex: 400,

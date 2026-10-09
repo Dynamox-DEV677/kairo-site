@@ -137,6 +137,16 @@ body::after {
   mask-image: radial-gradient(ellipse at 50% 60%, #000 5%, transparent 62%);
 }
 
+/* -- small screens --------------------------------------------------------- */
+
+/* Below the desktop breakpoint the five nav links overflow (529px of links on
+   a 375px phone) and the chapter rail sits on top of body text. Keep the one
+   link that matters there, and let the rail go: it is decoration. */
+@media (max-width: 860px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .chapter-rail { display: none !important; }
+}
+
 /* -- focus ----------------------------------------------------------------- */
 
 :where(a, button):focus-visible {
