@@ -308,7 +308,7 @@ export function IndustriesScene() {
       </ParallaxLayer>
 
       <div className="wrap" style={{ position: 'relative', height: '100%', display: 'grid', alignContent: 'end', paddingBottom: '10vh' }}>
-        <div className="label">06 — Kairo Industries</div>
+        <div className="label">07 — Kairo Industries</div>
         <p style={{ marginTop: 18, maxWidth: '40ch', fontSize: 'clamp(15px,1.2vw,19px)', lineHeight: 1.7, color: 'var(--muted)' }}>
           One company, one product at a time, built by the people who use it.
         </p>
@@ -329,7 +329,7 @@ export function FutureScene() {
       </ParallaxLayer>
 
       <div className="wrap" style={{ position: 'relative', height: '100%', display: 'grid', alignContent: 'center', justifyItems: 'center', textAlign: 'center', gap: 12 }}>
-        <div className="label" style={{ marginBottom: 26 }}>07 — The Future</div>
+        <div className="label" style={{ marginBottom: 26 }}>08 — The Future</div>
         <RevealText as="h2" className="display" by="word" stagger={0.1}
           style={{ fontSize: 'clamp(34px, 7vw, 120px)' }}>
           The future isn't waiting.
@@ -408,6 +408,20 @@ export function ContactScene() {
             </a>
             <p style={{ marginTop: 10, fontSize: 13.5, lineHeight: 1.6, color: 'var(--muted)', maxWidth: '28ch' }}>
               An AI learning system for students preparing for the exams that matter.
+            </p>
+          </div>
+
+          <div>
+            <div className="label" style={{ marginBottom: 12 }}>Also from Kairo</div>
+            <a
+              href="https://first-safety.vercel.app"
+              target="_blank" rel="noopener"
+              style={{ color: 'var(--white)', textDecoration: 'none', fontSize: 'clamp(14px,1.15vw,17px)', borderBottom: '1px solid var(--hair)', paddingBottom: 2 }}
+            >
+              First Safety ↗
+            </a>
+            <p style={{ marginTop: 10, fontSize: 13.5, lineHeight: 1.6, color: 'var(--muted)', maxWidth: '28ch' }}>
+              Dog-bite first aid and rabies prevention. Free, offline, no account.
             </p>
           </div>
         </div>

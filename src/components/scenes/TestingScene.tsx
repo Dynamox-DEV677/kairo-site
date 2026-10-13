@@ -60,7 +60,7 @@ export function TestingScene() {
 
       <div className="wrap" style={{ position: 'relative', display: 'grid', gap: 'clamp(40px, 6vh, 64px)' }}>
         <div>
-          <div className="label" style={{ marginBottom: 20 }}>08 — Test Kyno</div>
+          <div className="label" style={{ marginBottom: 20 }}>09 — Test Kyno</div>
           <RevealText as="h2" className="display" style={{ fontSize: 'clamp(34px, 7vw, 120px)', maxWidth: '12ch' }}>
             Help us test Kyno.
           </RevealText>

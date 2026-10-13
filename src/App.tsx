@@ -8,6 +8,7 @@ import {
   EducationScene, IndustriesScene, FutureScene, ContactScene,
 } from './components/scenes/Chapters'
 import { TestingScene } from './components/scenes/TestingScene'
+import { FirstSafetyScene } from './components/scenes/FirstSafetyScene'
 
 const CHAPTERS = [
   { id: 'arrival', n: '01' },
@@ -15,10 +16,11 @@ const CHAPTERS = [
   { id: 'systems', n: '03' },
   { id: 'technology', n: '04' },
   { id: 'education', n: '05' },
-  { id: 'industries', n: '06' },
-  { id: 'future', n: '07' },
-  { id: 'testing', n: '08' },
-  { id: 'contact', n: '09' },
+  { id: 'first-safety', n: '06' },
+  { id: 'industries', n: '07' },
+  { id: 'future', n: '08' },
+  { id: 'testing', n: '09' },
+  { id: 'contact', n: '10' },
 ]
 
 export default function App() {
@@ -35,6 +37,7 @@ export default function App() {
         <SystemsScene />
         <TechnologyScene />
         <EducationScene />
+        <FirstSafetyScene />
         <IndustriesScene />
         <FutureScene />
         <TestingScene />
@@ -130,7 +133,7 @@ function Nav() {
           edge), so on small screens only the tester call stays: that's the
           one a student arriving from a link actually needs. */}
       <div className="nav-links" style={{ display: 'flex', gap: 24 }}>
-        {[['Systems', 'systems'], ['Technology', 'technology'], ['Education', 'education'], ['Test Kyno', 'testing'], ['Contact', 'contact']].map(
+        {[['Systems', 'systems'], ['Technology', 'technology'], ['Education', 'education'], ['First Safety', 'first-safety'], ['Test Kyno', 'testing'], ['Contact', 'contact']].map(
           ([label, id]) => (
             <a key={id} href={`#${id}`} className={id === 'testing' ? 'label nav-cta' : 'label'}
               style={{ color: 'var(--white)', opacity: id === 'testing' ? 0.9 : 0.55, textDecoration: 'none', fontSize: 9.5 }}>
