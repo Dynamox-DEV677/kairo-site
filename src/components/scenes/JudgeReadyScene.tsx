@@ -30,7 +30,7 @@ export function JudgeReadyScene() {
       <div className="glow" style={{ left: '-12%', top: '25%', width: '55vw', height: '42vw', background: 'radial-gradient(ellipse, rgba(124,58,237,.2) 0%, transparent 66%)' }} />
 
       <div className="wrap" style={{ position: 'relative', display: 'grid', gap: 'clamp(36px, 6vh, 60px)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(36px, 5vw, 80px)', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'clamp(36px, 5vw, 80px)', alignItems: 'center' }}>
           <div>
             <div className="label" style={{ marginBottom: 20 }}>07 — Judge-Ready</div>
             <RevealText as="h2" className="display" style={{ fontSize: 'clamp(34px, 6.4vw, 110px)', maxWidth: '12ch' }}>
@@ -69,7 +69,7 @@ export function JudgeReadyScene() {
           </div>
         </div>
 
-        <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 18 }}>
+        <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: 18 }}>
           {INSIDE.map((f) => (
             <li key={f.t} style={{
               padding: '26px 22px 30px', border: '1px solid var(--hair)',
