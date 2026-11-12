@@ -1,6 +1,7 @@
 import { RevealText } from '../motion/RevealText'
 import { MagneticButton } from './Chapters'
 import { WHOP_URL } from '../../links'
+import { ToolkitShelf } from './ToolkitShelf'
 
 /* ===========================================================================
    07 — JUDGE-READY
@@ -100,6 +101,8 @@ export function JudgeReadyScene() {
             and project reviews.
           </p>
         </div>
+
+        <ToolkitShelf />
       </div>
     </section>
   )
